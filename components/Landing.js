@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React, { useEffect } from "react";
 import Lens from "./Lens";
 
 function Landing() {
   return (
     <div className="mt-[60px]">
-      <img
+      <Image
         src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         alt="Landiong image"
         className="w-screen h-[89vh] object-cover absolute "

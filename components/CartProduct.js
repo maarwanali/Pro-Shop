@@ -9,6 +9,7 @@ import {
   IncrementQuantity,
   DecrementQuantity,
 } from "../slices/CartSlice";
+import Image from "next/image";
 
 function CartProduct({
   image,
@@ -28,7 +29,7 @@ function CartProduct({
         onClick={() => dispatch(DeleteFromCart(cartId))}
       />
       <div className="w-[250px] h-fit flex flex-col justify-center items-center  ">
-        <img src={image} alt="" className="h-[200px]" />
+        <Image src={image} alt="" className="h-[200px]" />
 
         <h2 className="font-bold my-2 ">{title}</h2>
 

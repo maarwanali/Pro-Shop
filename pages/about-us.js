@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function About() {
@@ -5,7 +6,7 @@ function About() {
     <div className="mt-[100px]">
       <div className="mycontainer flex flex-col justify-center items-center ">
         <div className="my-5">
-          <img
+          <Image
             src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
             alt="logo"
             className="w-[40px] rounded-full  m-1"

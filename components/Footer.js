@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -6,7 +7,7 @@ function Footer() {
     <div className="bg-neutral-400 text-white ">
       <div className="mycontainer flex justify-center items-center flex-col ">
         <div className="h-[60px] flex justify-center items-center my-5">
-          <img
+          <Image
             src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
             alt="logo"
             className="w-[50px] rounded-full  m-1"

@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import { TbReportMoney } from "react-icons/tb";
 import { AiFillContacts } from "react-icons/ai";
 import { MdAdminPanelSettings } from "react-icons/md";
+import Image from "next/image";
 
 function Navbar() {
   const router = useRouter();
@@ -69,7 +70,7 @@ function Navbar() {
           onClick={() => router.push("/")}
           className="h-[60px] flex justify-center items-center cursor-pointer"
         >
-          <img
+          <Image
             src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
             alt="logo"
             className="w-[40px] rounded-full  m-1"

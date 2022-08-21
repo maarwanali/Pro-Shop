@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../slices/CartSlice";
 import { selectUser } from "../slices/UserSlice";
+import Image from "next/image";
 
 function Product({
   productImg,
@@ -61,7 +62,7 @@ function Product({
           Sale
         </p>
       )}
-      <img
+      <Image
         onClick={handleDetels}
         src={productImg}
         alt=""
