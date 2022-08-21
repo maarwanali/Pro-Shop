@@ -9,27 +9,27 @@ function Edit({ products }) {
 
   return (
     <>
-      {products &&
-        products.map((item) => {
-          if (item._id !== selectId) {
-            return;
-          }
-          return (
-            <EditForm
-              key={item._id}
-              ID={item._id}
-              NAME={item.name}
-              DESCRIPTION={item.description}
-              PRICE={item.price}
-              OLDPRICE={item.oldPrice}
-            />
-          );
-        })}
+      {products?.map((item) => {
+        if (item._id !== selectId) {
+          return;
+        }
+        return (
+          <EditForm
+            key={item._id}
+            ID={item._id}
+            NAME={item.name}
+            DESCRIPTION={item.description}
+            PRICE={item.price}
+            OLDPRICE={item.oldPrice}
+          />
+        );
+      })}
     </>
   );
 }
 
 export default Edit;
+
 export const getServerSideProps = async () => {
   const data = await axios.get("http://localhost:3000/api/products");
   return {
