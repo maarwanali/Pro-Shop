@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { signOut } from "next-auth/react";
 import { useSelector } from "react-redux";
 import { selectCartCount } from "../slices/CartSlice";
 function Item({ Icon, text, adress, Active }) {
