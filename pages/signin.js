@@ -133,7 +133,7 @@ function Signin() {
               Log In
             </button>
             <span>
-              Don't have an account ?{" "}
+              Do not have an account ?{" "}
               <Link href="/register">
                 <span className="text-red-400 cursor-pointer hover:text-red-600">
                   Create One.
