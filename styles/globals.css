@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(229, 231, 235);
+}
+
+.link {
+  @apply mx-10 flex flex-col justify-center items-center;
+}
+
+.lhover {
+  @apply py-2 px-4 rounded-md mx-5;
+}
+.canon:hover {
+  @apply bg-white text-red-700 font-bold transition-all duration-200;
+}
+
+.nikon:hover {
+  @apply bg-yellow-300 text-black font-bold transition-all  duration-200;
+}
+
+.sony:hover {
+  @apply bg-black text-white font-bold uppercase transition-all  duration-200;
+}
+
+.mycontainer {
+  @apply w-[80%] mx-auto my-0;
+}
+
+.input {
+  @apply my-1 w-[400px] p-1 outline-none border-gray-400 border-2 border-opacity-70;
+}
+
+.properties {
+  @apply w-[100%] text-center border-b-2  text-white  border-white border-opacity-30 py-1 hover:bg-gray-400 hover:scale-110 cursor-pointer;
+}
+
+.cart-botton {
+  @apply p-1 border-black border-opacity-50 bg-red-600  text-white font-bold  cursor-pointer hover:bg-red-400 rounded-md;
+}
+
+.animate-bouncex {
+  animation: bouncex 1s infinite;
+}
+
+/* logos of camers     */
+
+.xsony {
+  @apply bg-black text-white flex justify-center items-center py-1 shadow-sm shadow-slate-600 font-bold uppercase;
+}
+
+.xcanon {
+  @apply bg-white text-red-700 flex justify-center items-center py-1 px-1 shadow-sm shadow-slate-600 font-bold uppercase;
+}
+
+.xnikon {
+  @apply bg-yellow-300 text-black font-bold  flex justify-center items-center py-1 px-1 shadow-sm shadow-slate-600 font-bold uppercase;
+}
+
+.xsigma {
+  @apply bg-white text-red-700 flex justify-center items-center py-1 px-1 shadow-sm shadow-slate-600 font-bold uppercase;
+}
+
+@keyframes bouncex {
+  0%,
+  100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.move-off {
+  @apply right-[-200px] transition-all duration-500;
+}
+
+.move-on {
+  @apply right-0 transition-all duration-500;
+}
+
+.loading {
+  @apply w-[30px] h-[30px] rounded-full  border-black border-2  border-opacity-60  border-l-transparent animate-spin my-10;
+}
+
+.loading-II {
+  @apply w-[30px] h-[30px] rounded-full   border-black border-2  border-opacity-60  border-l-transparent animate-spin mt-3;
+}
+
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+  margin-top: 5px;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #07021b;
+  }
+  50%,
+  100% {
+    background-color: #ffffff;
+  }
+}
