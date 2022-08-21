@@ -29,7 +29,7 @@ function Edit({ products }) {
   );
 }
 
-export default edit;
+export default Edit;
 export const getServerSideProps = async () => {
   const data = await axios.get("http://localhost:3000/api/products");
   return {
