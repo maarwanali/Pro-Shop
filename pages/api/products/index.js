@@ -4,6 +4,7 @@ import connectDB from "../../../db/Connect";
 import nc from "next-connect";
 import multer from "multer";
 import fs from "fs";
+import path from "path";
 
 export const config = {
   api: {
@@ -13,7 +14,7 @@ export const config = {
 
 const storage = multer.diskStorage({
   destination: (req, res, cb) => {
-    cb(null, "public");
+    cb(null, path.join(__dirname, "/uploads/"));
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);

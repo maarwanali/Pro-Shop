@@ -37,9 +37,9 @@ function CreateProduct() {
     }
   };
 
-  // const addImage = () => {
-  //   console.log(uploadRef);
-  // };
+  const addImage = () => {
+    console.log(uploadRef);
+  };
   return (
     <div className="w-[89vw] h-[100vh] ">
       <div className="mycontianer flex items-center justify-center flex-col mt-[70px] ">
@@ -99,7 +99,7 @@ function CreateProduct() {
               name="image"
               hidden
               id="iamgeid"
-              // onChange={addImage}
+              onChange={addImage}
               ref={uploadRef}
             />
             <FaRegImages
