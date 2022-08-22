@@ -14,7 +14,7 @@ export const config = {
 
 const storage = multer.diskStorage({
   destination: (req, res, cb) => {
-    cb(null, path.join(__dirname, "/uploads/"));
+    cb(null, path.join(__dirname, "/public/"));
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
