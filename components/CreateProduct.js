@@ -20,11 +20,15 @@ function CreateProduct() {
     try {
       const formData = new FormData(formRef.current);
 
-      await axios.post("http://localhost:3000/api/products", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await axios.post(
+        "https://pro-shop-swart.vercel.app/api/products",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       router.push("/");
     } catch (err) {

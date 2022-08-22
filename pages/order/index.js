@@ -54,13 +54,16 @@ function Order() {
       orders: products,
     };
     console.log(data);
-    const order = await axios.post("http://localhost:3000/api/orders", data);
+    const order = await axios.post(
+      "https://pro-shop-swart.vercel.app/api/orders",
+      data
+    );
 
     const newData = {
       orderId: order.data.order._id,
     };
     const updatedUser = await axios.patch(
-      `http://localhost:3000/api/users/${userData.userId}`,
+      `https://pro-shop-swart.vercel.app/api/users/${userData.userId}`,
       newData
     );
 

@@ -78,7 +78,9 @@ export default Detiels;
 
 export const getServerSideProps = async (context) => {
   const { lensID } = context.params;
-  const data = await axios.get("http://localhost:3000/api/products");
+  const data = await axios.get(
+    "https://pro-shop-swart.vercel.app/api/products"
+  );
   const products = await data.data.products;
 
   const singleProduct = products.find((item) => item._id === lensID);

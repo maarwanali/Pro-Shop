@@ -38,7 +38,9 @@ export default function Home({ products }) {
   );
 }
 export const getServerSideProps = async (context) => {
-  const data = await axios.get("http://localhost:3000/api/products");
+  const data = await axios.get(
+    "https://pro-shop-swart.vercel.app/api/products"
+  );
   const products = await data.data.products;
   const { search } = context.query;
 

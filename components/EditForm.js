@@ -17,7 +17,10 @@ function EditForm({ ID, NAME, DESCRIPTION, PRICE, OLDPRICE }) {
       oldPrice: oldPrice,
     };
 
-    await axios.patchForm(`http://localhost:3000/api/products/${ID}`, newData);
+    await axios.patchForm(
+      `https://pro-shop-swart.vercel.app/api/products/${ID}`,
+      newData
+    );
 
     router.push("/");
   };

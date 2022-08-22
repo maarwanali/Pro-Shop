@@ -72,11 +72,14 @@ export default function Register() {
     event.preventDefault();
     if (handleValidation()) {
       const { email, username, password } = values;
-      const { data } = await axios.post("http://localhost:3000/api/users", {
-        username,
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        "https://pro-shop-swart.vercel.app/api/users",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       if (data.status === false) {
         setErr(data.msg);

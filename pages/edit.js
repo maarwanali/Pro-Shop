@@ -31,7 +31,9 @@ function Edit({ products }) {
 export default Edit;
 
 export const getServerSideProps = async () => {
-  const data = await axios.get("http://localhost:3000/api/products");
+  const data = await axios.get(
+    "https://pro-shop-swart.vercel.app/api/products"
+  );
   return {
     props: {
       products: data.data.products,

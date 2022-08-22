@@ -17,11 +17,11 @@ function Myorder({ order, user, products }) {
     };
 
     const deletedOrder = await axios.delete(
-      `http://localhost:3000/api/orders/${order._id}`
+      `https://pro-shop-swart.vercel.app/api/orders/${order._id}`
     );
 
     const updatedOrder = await axios.patch(
-      `http://localhost:3000/api/users/${order.user}`,
+      `https://pro-shop-swart.vercel.app/api/users/${order.user}`,
       newData
     );
 
@@ -102,13 +102,13 @@ export const getServerSideProps = async (context) => {
   const { orderID } = context.params;
 
   const myOrder = await axios.get(
-    `http://localhost:3000/api/orders/${orderID}`
+    `https://pro-shop-swart.vercel.app/api/orders/${orderID}`
   );
   const data = await myOrder.data.order;
   const userid = data.user;
 
   const userInformation = await axios.get(
-    `http://localhost:3000/api/users/${userid}`
+    `https://pro-shop-swart.vercel.app/api/users/${userid}`
   );
 
   const itemIds = data.orders;
@@ -119,7 +119,7 @@ export const getServerSideProps = async (context) => {
     itemIds?.map(async (itemId) => {
       const id = itemId.item;
       const orderInformation = await axios.get(
-        `http://localhost:3000/api/products/${id}`
+        `https://pro-shop-swart.vercel.app/api/products/${id}`
       );
 
       const itemData = orderInformation.data;

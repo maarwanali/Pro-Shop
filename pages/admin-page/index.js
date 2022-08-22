@@ -12,7 +12,7 @@ function AdminPage({ orders }) {
 
   const handleDelete = async (id) => {
     const deletedOrder = await axios.delete(
-      `http://localhost:3000/api/orders/${id}`
+      `https://pro-shop-swart.vercel.app/api/orders/${id}`
     );
     if (deletedOrder) {
       router.reload();
@@ -21,7 +21,7 @@ function AdminPage({ orders }) {
 
   const orderHandle = async (orderid) => {
     const singleData = await axios.get(
-      `http://localhost:3000/api/orders/${orderid}`
+      `https://pro-shop-swart.vercel.app/api/orders/${orderid}`
     );
     setData(singleData.data.order);
     setOpen(true);
@@ -69,7 +69,7 @@ function AdminPage({ orders }) {
 export default AdminPage;
 
 export const getServerSideProps = async () => {
-  const data = await axios.get("http://localhost:3000/api/orders");
+  const data = await axios.get("https://pro-shop-swart.vercel.app/api/orders");
 
   const finalData = await data.data.allOrders;
 
