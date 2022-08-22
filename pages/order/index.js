@@ -55,7 +55,7 @@ function Order() {
     };
     console.log(data);
     const order = await axios.post(
-      "https://pro-shop-swart.vercel.app/api/orders",
+      `${process.env.NEXT_PUBLIC_URL}/api/orders`,
       data
     );
 
@@ -63,7 +63,7 @@ function Order() {
       orderId: order.data.order._id,
     };
     const updatedUser = await axios.patch(
-      `https://pro-shop-swart.vercel.app/api/users/${userData.userId}`,
+      `${process.env.NEXT_PUBLIC_URL}/api/users/${userData.userId}`,
       newData
     );
 

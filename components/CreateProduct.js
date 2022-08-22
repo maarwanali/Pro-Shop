@@ -21,7 +21,7 @@ function CreateProduct() {
       const formData = new FormData(formRef.current);
 
       await axios.post(
-        "https://pro-shop-swart.vercel.app/api/products",
+        `${process.env.NEXT_PUBLIC_URL}/api/products`,
         formData,
         {
           headers: {
@@ -47,7 +47,7 @@ function CreateProduct() {
           ADD NEW PRODUCT
         </h1>
         <form
-          action="https://pro-shop-swart.vercel.app/api/products"
+          action={`${process.env.NEXT_PUBLIC_URL}/api/products`}
           encType="multipart/form-data"
           onSubmit={submitProduct}
           method="POST"

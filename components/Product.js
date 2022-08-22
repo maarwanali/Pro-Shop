@@ -27,7 +27,7 @@ function Product({
     router.push("/edit");
   };
   const deleteHadle = async () => {
-    await axios.delete(`https://pro-shop-swart.vercel.app/api/products/${id}`);
+    await axios.delete(`${process.env.NEXT_PUBLIC_URL}/api/products/${id}`);
     setOptions(false);
   };
 

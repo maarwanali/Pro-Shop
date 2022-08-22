@@ -50,7 +50,7 @@ function Signin() {
     if (validateForm()) {
       const { username, password } = values;
       const { data } = await axios.post(
-        "https://pro-shop-swart.vercel.app/api/users/signin",
+        `${process.env.NEXT_PUBLIC_URL}/api/users/signin`,
         {
           username,
           password,

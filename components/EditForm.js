@@ -18,7 +18,7 @@ function EditForm({ ID, NAME, DESCRIPTION, PRICE, OLDPRICE }) {
     };
 
     await axios.patchForm(
-      `https://pro-shop-swart.vercel.app/api/products/${ID}`,
+      `${process.env.NEXT_PUBLIC_URL}/api/products/${ID}`,
       newData
     );
 

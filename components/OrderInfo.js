@@ -11,7 +11,7 @@ function OrderInfo({ order, setOpen }) {
       try {
         const userid = order.user;
         const data = await axios.get(
-          `https://pro-shop-swart.vercel.app/api/users/${userid}`
+          `${process.env.NEXT_PUBLIC_URL}/api/users/${userid}`
         );
         setUser(data.data.user);
       } catch (err) {
@@ -27,7 +27,7 @@ function OrderInfo({ order, setOpen }) {
           order?.orders?.map(async (itemId) => {
             const id = itemId.item;
             const orderInformation = await axios.get(
-              `https://pro-shop-swart.vercel.app/api/products/${id}`
+              `${process.env.NEXT_PUBLIC_URL}/api/products/${id}`
             );
 
             const itemData = orderInformation.data.singleProudct;

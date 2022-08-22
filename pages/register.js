@@ -74,7 +74,7 @@ export default function Register() {
     if (handleValidation()) {
       const { email, username, password } = values;
       const { data } = await axios.post(
-        "https://pro-shop-swart.vercel.app/api/users",
+        `${process.env.NEXT_PUBLIC_URL}/api/users`,
         {
           username,
           email,

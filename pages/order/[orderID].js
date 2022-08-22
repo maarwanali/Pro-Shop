@@ -17,11 +17,11 @@ function Myorder({ order, user, products }) {
     };
 
     const deletedOrder = await axios.delete(
-      `https://pro-shop-swart.vercel.app/api/orders/${order._id}`
+      `${process.env.NEXT_PUBLIC_URL}/api/orders/${order._id}`
     );
 
     const updatedOrder = await axios.patch(
-      `https://pro-shop-swart.vercel.app/api/users/${order.user}`,
+      `${process.env.NEXT_PUBLIC_URL}/api/users/${order.user}`,
       newData
     );
 
@@ -102,13 +102,13 @@ export const getServerSideProps = async (context) => {
   const { orderID } = context.params;
 
   const myOrder = await axios.get(
-    `https://pro-shop-swart.vercel.app/api/orders/${orderID}`
+    `${process.env.NEXT_PUBLIC_URL}/api/orders/${orderID}`
   );
   const data = await myOrder.data.order;
   const userid = data.user;
 
   const userInformation = await axios.get(
-    `https://pro-shop-swart.vercel.app/api/users/${userid}`
+    `${process.env.NEXT_PUBLIC_URL}/api/users/${userid}`
   );
 
   const itemIds = data.orders;
@@ -119,7 +119,7 @@ export const getServerSideProps = async (context) => {
     itemIds?.map(async (itemId) => {
       const id = itemId.item;
       const orderInformation = await axios.get(
-        `https://pro-shop-swart.vercel.app/api/products/${id}`
+        `${process.env.NEXT_PUBLIC_URL}/api/products/${id}`
       );
 
       const itemData = orderInformation.data;
