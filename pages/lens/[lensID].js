@@ -1,6 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../slices/CartSlice";
 import _arrayBufferToBase64 from "../../components/Converter";
@@ -11,14 +11,16 @@ function Detiels({ product }) {
   const base64String = _arrayBufferToBase64(product?.image?.data?.data);
   const dispatch = useDispatch();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
   return (
     <div className="mt-[100px] w-[100%]">
       <div className="mycontainer flex flex-col ">
         <div className=" flex">
-          <img
+          <Image
             src={`data:image/png;base64,${base64String}`}
             alt="product image"
-            width={700}
+            width="500px"
+            height="100%"
           />
 
           <div className="mt-[40px] ml-[30px] flex flex-col item-center">
@@ -55,13 +57,18 @@ function Detiels({ product }) {
         </div>
 
         <button
-          onClick={() => router.back()}
+          onClick={() => {
+            router.back();
+            setLoading(true);
+          }}
           className="flex justify-center items-center bg-red-400 my-10 text-white text-l w-fit px-5 shadow-red-900 shadow-lg "
         >
           {" "}
           <AiOutlineArrowLeft className="mr-4 w-[80px]  font-bold  animate-bouncex" />{" "}
           Get back to homa bage
         </button>
+
+        {loading && <div className="loading-II ml-[150px]"></div>}
       </div>
     </div>
   );

@@ -7,11 +7,15 @@ function Footer() {
     <div className="bg-neutral-400 text-white ">
       <div className="mycontainer flex justify-center items-center flex-col ">
         <div className="h-[60px] flex justify-center items-center my-5">
-          <Image
-            src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
-            alt="logo"
-            className="w-[50px] rounded-full  m-1"
-          />
+          <div className="m-1">
+            <Image
+              src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
+              alt="logo"
+              width="50px"
+              height="50px"
+              className="w-[50px] rounded-full  m-1"
+            />
+          </div>
           <h3 className=" text-xl ">ProShop</h3>
         </div>
 

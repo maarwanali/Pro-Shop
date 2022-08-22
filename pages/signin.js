@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { PuplishUser, selectUser } from "../slices/UserSlice";
+import Image from "next/image";
 
 function Signin() {
   const [values, setValues] = useState({ username: "", password: "" });
@@ -104,10 +105,12 @@ function Signin() {
               </div>
             )}
             <div className="my-7 ">
-              <img
+              <Image
                 src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
                 alt="logo"
-                className="w-[40px] rounded-full  m-1"
+                width="50px"
+                height="50px"
+                className="rounded-full  m-1"
               />
               <h1>ProShop</h1>
             </div>

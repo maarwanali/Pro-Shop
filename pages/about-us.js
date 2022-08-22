@@ -9,7 +9,9 @@ function About() {
           <Image
             src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
             alt="logo"
-            className="w-[40px] rounded-full  m-1"
+            width="40px"
+            height="40px"
+            className=" rounded-full  m-1"
           />
           <h1>ProShop</h1>
         </div>

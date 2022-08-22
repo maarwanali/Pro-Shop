@@ -70,11 +70,15 @@ function Navbar() {
           onClick={() => router.push("/")}
           className="h-[60px] flex justify-center items-center cursor-pointer"
         >
-          <Image
-            src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
-            alt="logo"
-            className="w-[40px] rounded-full  m-1"
-          />
+          <div className=" m-1">
+            <Image
+              src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
+              alt="logo"
+              width="40px"
+              height="40px"
+              className=" rounded-full "
+            />
+          </div>
           <h3 className="">ProShop</h3>
         </div>
         {/* absolute sm:flex-col my-5 top-0 right-0 bg-black z-20 w-[300px] h-[200px]  */}

@@ -11,8 +11,8 @@ function About() {
       <div className="mycontainer flex justify-center items-center my-[70px]">
         <Image
           src={PersonalImage}
-          width={300}
-          height={300}
+          width="300px"
+          height="300px"
           className=" rounded-full "
         />
 

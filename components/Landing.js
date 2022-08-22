@@ -4,13 +4,16 @@ import Lens from "./Lens";
 
 function Landing() {
   return (
-    <div className="mt-[60px]">
+    <div className="mt-[150px]">
       <Image
         src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         alt="Landiong image"
-        className="w-screen h-[89vh] object-cover absolute "
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className=" object-cover absolute "
       />
-      <div className="absolute top-0 right-0 left-0 bottom-0 max-h-[89vh] bg-black bg-opacity-40 mt-[60px] "></div>
+      <div className="absolute top-0 right-0 left-0 bottom-0 max-h-[100vh] bg-black bg-opacity-40 mt-[60px] "></div>
       <div className="relative overflow-hidden h-[89vh] group  text-white w-[80%] mx-auto ">
         <Lens />
         <h2 className="  mt-20 font-bold text-lg text-center  transition-all duration-200 group-hover:scale-150">

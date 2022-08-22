@@ -66,7 +66,9 @@ function Product({
         onClick={handleDetels}
         src={productImg}
         alt=""
-        className="h-[250px] hover:scale-110 hover:rotate-6 transition-all duration-150  cursor-pointer  mt-2"
+        height="250px"
+        width="400px"
+        className=" hover:scale-110 hover:rotate-6 transition-all duration-150  cursor-pointer  mt-2"
       />
       <div className="flex flex-col justify-center items-center my-2 ">
         <h3 className="font-bold py-2 px-4 relative  after:content[' '] after:w-[100%] after:h-[2px]  after:bg-black after:absolute  after:bottom-2 after:left-[50%] after:translate-x-[-50%] after:animate-pulse">
