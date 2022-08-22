@@ -16,7 +16,7 @@ function Footer() {
               className="w-[50px] rounded-full  m-1"
             />
           </div>
-          <h3 className=" text-xl ">ProShop</h3>
+          <h3 className=" text-xl ">EveShop</h3>
         </div>
 
         <div className=" my-5 w-[100%] flex justify-around text-sm ">

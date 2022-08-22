@@ -47,7 +47,7 @@ function CreateProduct() {
           ADD NEW PRODUCT
         </h1>
         <form
-          action="http://localhost:3000/api/products"
+          action="https://pro-shop-swart.vercel.app/api/products"
           encType="multipart/form-data"
           onSubmit={submitProduct}
           method="POST"

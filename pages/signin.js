@@ -112,7 +112,7 @@ function Signin() {
                 height="50px"
                 className="rounded-full  m-1"
               />
-              <h1>ProShop</h1>
+              <h1>EveShop</h1>
             </div>
             <input
               type="text"

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { PuplishUser } from "../slices/UserSlice";
+import Image from "next/image";
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -120,12 +121,14 @@ export default function Register() {
           )}
 
           <div className="my-5">
-            <img
+            <Image
               src="https://www.kindpng.com/picc/m/249-2492288_camera-lens-vector-png-transparent-png.png"
               alt="logo"
+              width="50px"
+              height="50px"
               className="w-[40px] rounded-full  m-1"
             />
-            <h1>ProShop</h1>
+            <h1>EveShop</h1>
           </div>
           <input
             type="text"

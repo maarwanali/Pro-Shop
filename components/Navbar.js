@@ -79,7 +79,7 @@ function Navbar() {
               className=" rounded-full "
             />
           </div>
-          <h3 className="">ProShop</h3>
+          <h3 className="">EveShop</h3>
         </div>
         {/* absolute sm:flex-col my-5 top-0 right-0 bg-black z-20 w-[300px] h-[200px]  */}
         <ClickAwayListener onClickAway={handleClickAway}>

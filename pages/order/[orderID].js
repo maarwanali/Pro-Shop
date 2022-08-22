@@ -88,7 +88,7 @@ function Myorder({ order, user, products }) {
             onClick={handleDelete}
             className="bg-red-400 text-white py-1 px-5 shadow-md shadow-slate-500 text-lg my-10 hover:bg-red-600 "
           >
-            Cancle Order.
+            Cancel Order.
           </button>
         </div>
       </div>

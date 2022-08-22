@@ -13,7 +13,7 @@ function About() {
             height="40px"
             className=" rounded-full  m-1"
           />
-          <h1>ProShop</h1>
+          <h1>EveShop</h1>
         </div>
 
         <p className=" text-lg opacity-70 my-9">
