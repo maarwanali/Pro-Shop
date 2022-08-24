@@ -143,10 +143,10 @@ function Navbar() {
 
         {userData?.username === `${process.env.NEXT_PUBLIC_ADMIN}` ? (
           <div
-            className=" fixed bottom-10 left-10 bg-red-600 text-white rounded-full  hover:bg-orange-600 cursor-pointer"
+            className=" fixed bottom-10 left-10 bg-red-600 text-white rounded-full -z-50  hover:bg-orange-600 cursor-pointer"
             onClick={() => router.push("/admin-page")}
           >
-            <MdAdminPanelSettings size={45} className="   p-2 " />
+            <MdAdminPanelSettings size={45} className="  p-2 " />
           </div>
         ) : (
           <></>

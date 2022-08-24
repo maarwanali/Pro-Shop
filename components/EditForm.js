@@ -25,7 +25,7 @@ function EditForm({ ID, NAME, DESCRIPTION, PRICE, OLDPRICE }) {
     router.push("/");
   };
   return (
-    <div className="w-[100vw] h-[89vh] flex flex-col justify-center items-center absolute z-50 bg-black bg-opacity-50 ">
+    <div className="w-[100vw] h-[92vh] flex flex-col justify-center items-center absolute z-40 bg-black bg-opacity-50 ">
       <h1 className="my-5 text-white font-bold">EDITE PORODUCT</h1>
       <form
         action={`/api/products/${ID}`}

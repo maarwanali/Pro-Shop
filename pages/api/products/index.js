@@ -6,27 +6,26 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
-const storage = multer.diskStorage({
-  destination: (req, res, cb) => {
-    cb(null, "public");
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: (req, res, cb) => {
+//     cb(null, "public");
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.originalname);
+//   },
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
-const uploadFile = upload.single("image");
+// const uploadFile = upload.single("image");
 
 const handler = nc()
-  .use(uploadFile)
   .post(async (req, res) => {
     try {
       if (await connectDB()) {
@@ -39,10 +38,11 @@ const handler = nc()
         description: req.body.description,
         price: req.body.price,
         oldPrice: req.body.oldPrice,
-        image: {
-          data: fs.readFileSync("public/" + req.file.filename),
-          contentType: "image/png",
-        },
+        image: req.body.image,
+        // {
+        //   data: fs.readFileSync("public/" + req.file.filename),
+        //   contentType: "image/png",
+        // },
       });
       if (!newProduct) {
         return res.status(400).json({ msg: "Error ocourding while uploading" });

@@ -9,12 +9,12 @@ function Products({ products }) {
       <div className="mycontainer flex flex-wrap justify-center items-center lg:grid lg:grid-cols-2 xl:grid-cols-3   gap-4">
         {products &&
           products.map((item, index) => {
-            const base64String = _arrayBufferToBase64(item.image?.data?.data);
+            // const base64String = _arrayBufferToBase64(item.image?.data?.data);
 
             return (
               <Product
                 key={item._id}
-                productImg={`data:image/png;base64,${base64String}`}
+                productImg={item.image}
                 title={item.name}
                 description={item.description}
                 oldPrice={item.oldPrice}

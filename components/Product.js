@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../slices/CartSlice";
 import { selectUser } from "../slices/UserSlice";
 import Image from "next/image";
+import ClickAwayListener from "react-click-away-listener";
 
 function Product({
   productImg,
@@ -34,26 +35,28 @@ function Product({
   const handleDetels = () => {
     router.push("/lens/" + id);
   };
+
   return (
-    <div className="border-2 border-black border-opacity-20 rounded-md w-[250] p-3 flex flex-col justify-center items-center relative overflow-hidden relative  ">
+    <div className="border-2 border-black border-opacity-20 rounded-md w-[250] p-5 flex flex-col justify-center items-center relative overflow-hidden relative  ">
       {userData?.username === `${process.env.NEXT_PUBLIC_ADMIN}` && (
         <>
           <BiDotsHorizontal
             size={20}
-            className="absolute top-0 right-2 cursor-pointer text-gray-900"
+            className="absolute top-[-1px] right-2 cursor-pointer text-gray-900"
             onClick={() => setOptions(!options)}
           />
-
-          {options && (
-            <div className="w-[200px] h-fit bg-gray-800 z-30  flex flex-col justify-center items-center absolute top-5 right-3 shadow-black overflow-hidden ">
-              <p className="properties" onClick={() => editeHandle(id)}>
-                Edite
-              </p>
-              <p className="properties" onClick={() => deleteHadle(id)}>
-                Delete
-              </p>
-            </div>
-          )}
+          <>
+            {options && (
+              <div className="w-[200px] h-fit bg-gray-800 z-30  flex flex-col justify-center items-center absolute top-5 right-3 shadow-black overflow-hidden ">
+                <p className="properties" onClick={() => editeHandle(id)}>
+                  Edite
+                </p>
+                <p className="properties" onClick={() => deleteHadle(id)}>
+                  Delete
+                </p>
+              </div>
+            )}
+          </>
         </>
       )}
 

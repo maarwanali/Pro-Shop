@@ -5,27 +5,27 @@ import nc from "next-connect";
 import multer from "multer";
 import fs from "fs";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
-const storage = multer.diskStorage({
-  destination: (req, res, cb) => {
-    cb(null, "public");
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: (req, res, cb) => {
+//     cb(null, "public");
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.originalname);
+//   },
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
-const uploadFile = upload.single("image");
+// const uploadFile = upload.single("image");
+// .use(uploadFile)
 
 const productid = nc()
-  .use(uploadFile)
   .get(async (req, res) => {
     try {
       await connectDB();

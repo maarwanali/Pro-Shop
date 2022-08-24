@@ -17,7 +17,7 @@ function Detiels({ product }) {
       <div className="mycontainer flex flex-col ">
         <div className=" flex">
           <Image
-            src={`data:image/png;base64,${base64String}`}
+            src={product.image}
             alt="product image"
             width="500px"
             height="100%"

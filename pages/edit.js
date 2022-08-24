@@ -8,7 +8,7 @@ function Edit({ products }) {
   const selectId = useSelector(selectID);
 
   return (
-    <>
+    <div className="mt-[60px]">
       {products?.map((item) => {
         if (item._id !== selectId) {
           return;
@@ -24,7 +24,7 @@ function Edit({ products }) {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
