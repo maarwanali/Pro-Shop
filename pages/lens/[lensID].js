@@ -15,15 +15,16 @@ function Detiels({ product }) {
   return (
     <div className="mt-[100px] w-[100%]">
       <div className="mycontainer flex flex-col ">
-        <div className=" flex">
+        <div className=" flex flex-col   lg:flex-row ">
           <Image
             src={product.image}
             alt="product image"
             width="500px"
-            height="100%"
+            height="500px"
+            className="flex-1"
           />
 
-          <div className="mt-[40px] ml-[30px] flex flex-col item-center">
+          <div className="mt-[40px] ml-[30px]  flex-col item-center flex-1">
             <h2 className={` font-bold text-xl  x${product.name} `}>
               {product.name}
             </h2>

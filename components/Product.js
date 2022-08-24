@@ -69,7 +69,7 @@ function Product({
         onClick={handleDetels}
         src={productImg}
         alt=""
-        height="250px"
+        height="400px"
         width="400px"
         className=" hover:scale-110 hover:rotate-6 transition-all duration-150  cursor-pointer  mt-2"
       />
@@ -78,9 +78,9 @@ function Product({
           {title}
         </h3>
         <p className="opacity-70 text-s my-3">
-          {description}
-          {/* {description.substring(0, 40)} */}
-          {/* {description.length > 40 && <>....</>} */}
+          {/* {description} */}
+          {description.length > 40 ? description.substring(0, 40) : description}
+          {description.length > 40 && <>....</>}
         </p>
 
         <div className="text-red-600 font-bold my-4 flex h-[30px] ">
