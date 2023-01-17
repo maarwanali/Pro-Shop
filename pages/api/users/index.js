@@ -58,6 +58,10 @@ export default async function usres(req, res) {
           .json({ msg: "user does not created something went worng" });
       }
 
+
+      
+
+
       return res.status(200).json({ users });
     } catch (err) {
       res.status(404).json({ msg: err });

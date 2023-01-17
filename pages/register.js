@@ -48,8 +48,24 @@ export default function Register() {
       }, 3000);
 
       return false;
+    } else if (username.includes(" ")) {
+      setErr("Username should not has a space.");
+
+      setTimeout(() => {
+        setErr("");
+      }, 3000);
+
+      return false;
     } else if (password.length < 8) {
       setErr("Password should be equal or greater than 8 characters.");
+
+      setTimeout(() => {
+        setErr("");
+      }, 3000);
+
+      return false;
+    } else if (password.includes(" ")) {
+      setErr("Password should not has a space .");
 
       setTimeout(() => {
         setErr("");
@@ -90,14 +106,6 @@ export default function Register() {
         }, 3000);
       }
       if (data.status === true) {
-        // const { username, email, orderId } = data.newUser;
-        // dispatch(
-        //   PuplishUser({
-        //     username: username,
-        //     email: email,
-        //     orderId: orderId,
-        //   })
-        // );
         localStorage.setItem("userName", JSON.stringify(data.newUser));
         setUser(data.newUser);
 

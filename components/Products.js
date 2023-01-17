@@ -19,7 +19,7 @@ function Products({ products }) {
                 description={item.description}
                 oldPrice={item.oldPrice}
                 price={item.price}
-                id={item._id}
+                 id={item._id}
                 cartId={index}
               />
             );
